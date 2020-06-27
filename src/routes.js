@@ -1,14 +1,14 @@
 const express = require('express');
-const multer = require('multer');
-const uploadConfig = require('./config/upload');
 const SessionController = require('./controllers/SessionController');
 const SpotController = require('./controllers/SpotController');
 const DashboardController = require('./controllers/DashboardController');
 const BookingController = require('./controllers/BookingController');
 const ApprovalController = require('./controllers/ApprovalController');
 const DeclineController = require('./controllers/DeclineController');
+const multer = require('multer'); // To use 'multipart form'
+const uploadConfig = require('./config/upload'); // set by Multer
+const upload = multer(uploadConfig); // set by Multer
 const routes = express.Router();
-const upload = multer(uploadConfig);
 
 routes.post('/sessions', SessionController.store);
 routes.get('/spots', SpotController.index);

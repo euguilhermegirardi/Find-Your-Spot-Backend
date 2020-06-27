@@ -10,14 +10,14 @@ const SpotSchema = new mongoose.Schema({
     ref: 'User'
   }
 
-  // Send the IMG t the frontend
+  // Send the IMG to the frontend
 }, {
   toJSON: {
     virtuals: true,
   },
 });
 
-// Send the IMG t the frontend
+// Send the IMG to the frontend
 SpotSchema.virtual('thumbnail_url').get(function() {
   return `http://localhost:3333/files/${this.thumbnail}`
 });

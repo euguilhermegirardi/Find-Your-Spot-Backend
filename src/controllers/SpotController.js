@@ -26,7 +26,7 @@ module.exports = {
       company,
       price,
       services: services.split(',').map(service => service.trim())
-    })
+    });
 
     return res.json(spot);
   }

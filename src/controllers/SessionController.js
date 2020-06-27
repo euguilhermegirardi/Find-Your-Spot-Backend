@@ -1,3 +1,4 @@
+// controller receives the request, work on it and send an answer
 const User = require('../models/User');
 
 module.exports = {
@@ -13,10 +14,9 @@ module.exports = {
     return res.json(user);
   }
 };
-// controller receives the request, work on it and send an answer
 
-// index return a list of sessions.
-// show list only 1 session.
-// store creates a session.
-// update updates a session.
-// destroy removes a session.
+// index return a list of sessions = GET.
+// show list only 1 session = GET.
+// store creates a session = POST.
+// update updates a session = PUT.
+// destroy removes a session = DELETE.
